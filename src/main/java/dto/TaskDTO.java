@@ -1,22 +1,15 @@
-package model;
+package dto;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import model.TaskLevel;
 
-import javax.persistence.*;
+public class TaskDTO {
 
-@Entity
-@Table
-public class Tasks {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long taskId;
-@Column
-private String taskDesc;
-@Column
-private Boolean complete;
-@Column
-private TaskLevel level;
-@Column
-private String username;
+    private Long taskId;
+    private String taskDesc;
+    private String username;
+    private Boolean complete;
+    private TaskLevel level;
 
     public Long getTaskId() {
         return taskId;
@@ -32,6 +25,14 @@ private String username;
 
     public void setTaskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Boolean getComplete() {

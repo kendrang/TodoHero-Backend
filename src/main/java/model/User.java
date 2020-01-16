@@ -13,6 +13,8 @@ private Long userId;
 private String username;
 @Column
 private String password;
+@Column
+private Integer balance;
 
     public Long getUserId() {
         return userId;
@@ -37,4 +39,13 @@ private String password;
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public Integer getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
+    }
+
 }
